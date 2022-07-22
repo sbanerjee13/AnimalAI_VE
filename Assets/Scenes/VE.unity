@@ -231,7 +231,7 @@ GameObject:
   - component: {fileID: 289515162}
   - component: {fileID: 289515161}
   m_Layer: 0
-  m_Name: Main Camera
+  m_Name: Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -372,7 +372,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 820046873}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2, y: 0, z: -2}
+  m_LocalPosition: {x: -2, y: -0.3, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -486,7 +486,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1339530714}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 365e953c6c1a5444dad5853ba8bd4b92, type: 3}
+  m_Script: {fileID: 11500000, guid: bab68a8383a94184abd97e6243456fd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   agentParameters:
@@ -538,6 +538,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0af9b0ecb6c86c469d4806d818cdcd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1339530720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1339530714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bb6b867a41448888c1cd4f99643ad71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SensorName: RayPerceptionSensor
+  m_DetectableTags:
+  - MainCamera
+  - VE
+  - Food
+  m_RaysPerDirection: 3
+  m_MaxRayDegrees: 70
+  m_SphereCastRadius: 0.5
+  m_RayLength: 20
+  m_RayLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967291
+  m_ObservationStacks: 1
+  rayHitColor: {r: 1, g: 0, b: 0, a: 1}
+  rayMissColor: {r: 1, g: 1, b: 1, a: 1}
+  m_StartVerticalOffset: 0
+  m_EndVerticalOffset: 0
 --- !u!1 &1591452922
 GameObject:
   m_ObjectHideFlags: 0
@@ -553,7 +582,7 @@ GameObject:
   - component: {fileID: 1591452927}
   - component: {fileID: 1591452928}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: Main Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

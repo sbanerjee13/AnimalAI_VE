@@ -26,7 +26,7 @@ public class SquirrelRaycastComponent : Agent
 
         rBody.angularVelocity = Vector3.zero;
 
-        this.transform.localPosition = new Vector3(Random.Range(-0.5f, 0.5f), 0.0142f - 0.3f, Random.Range(-0.5f, 0.5f));
+        this.transform.localPosition = new Vector3(Random.Range(-0.5f, 0.5f), 0.0142f-0.3f, Random.Range(-0.5f, 0.5f));
     }
 
     public override void CollectObservations(VectorSensor sensor)
@@ -131,7 +131,7 @@ public class SquirrelRaycastComponent : Agent
             AddReward(1f);
         }
 
-        if (collision.gameObject.name.StartsWith("Sphere"))
+        if (collision.gameObject.name.StartsWith("Main Camera"))
         {
             AddReward(-0.5f);
             EndEpisode();
